@@ -24,13 +24,11 @@ module.exports = {
     site: SOURCE_ROOT + "/site/main.js",
   },
   output: {
-    filename: "clientlib-site/js/[name].bundle.js",
+    filename: "clientlib-site/[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
+    splitChunks: false,
   },
   module: {
     rules: [
